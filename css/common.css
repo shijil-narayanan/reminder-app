@@ -1,0 +1,72 @@
+
+@font-face {
+    font-family: 'Lato';
+    src: url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato-Bold", Times, serif;
+
+}
+
+.blue-gradient-btn{
+    letter-spacing: 0.86px;
+    background-image:linear-gradient(263deg, #93DCFF 0%, #1996F9 94%);
+    font-family: Lato-Bold;
+    color: white;
+    border-radius: 28.5px;
+}
+
+
+button{
+    outline: none;
+    cursor: pointer;
+    border:0;
+}
+
+input, textarea{
+    outline: 0;
+    border:0
+}
+
+input:focus, textarea:focus{
+    outline: 0;
+
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}
+
+input[type=text]{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header{
+    padding: 14.5px 18px;
+}
+
+
+.header-content {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.header-content .help{
+    margin-left: auto;
+    height:30px;
+    cursor:pointer;
+    width: 30px;
+}
+
+
+.header-content .logo {
+    height:34px;
+}

@@ -1,0 +1,154 @@
+
+
+.add-reminder-section{
+    display: flex;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: inherit;
+}
+
+.add-reminder-input{
+    padding:20px 18px;
+    background-color: rgba(255,255,255, 0.16);
+}
+
+.reminder-title{
+    display: block;
+    height: 22px;
+    font-size: 18px;
+    width:100%;
+    color:white;
+    background: transparent;
+}
+
+.reminder-description{
+    width:100%;
+    color:white;
+    background: transparent;
+    margin-top:10px;
+    font-size:13px;
+    margin-bottom:4px;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color:white;
+}
+
+.reminder-title:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:white;
+}
+
+.reminder-title ::placeholder {
+    color:white;
+}
+
+.set-time-block{
+    margin: 0 29px;
+    color: white;
+    font-size:13px;
+}
+
+
+.priority-section{
+    margin-top:26.2px;
+}
+
+.btn-group{
+    margin-top:8.8px;
+}
+.btn-group button {
+    background-color: rgba(0, 0, 0, 0.19);
+    color: white;
+    padding: 13px 24px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group .high{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+
+.btn-group .low{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.save-btn{
+    font-size:13px;
+    padding: 10.5px 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 27px;
+}
+
+.btn-group button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.date-picker{
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 4px 0 rgba(20,20,20,0.38);
+    border-radius: 8px;
+    padding: 13px 10px;
+    font-family: Lato-Bold;
+    margin-top:8.8px;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+.set-reminder-time{
+    position:relative;
+}
+
+.drop-down{
+    position: absolute;
+    right: 15px;
+    top: 21px;
+}
+
+.btn-group button:before {
+    position: relative;
+    top: 3px;
+    left: -5px;
+}
+
+.high:before {
+    content: url("../assets/images/red.png");
+}
+
+.medium:before {
+    content: url("../assets/images/green.png");
+}
+
+.low:before {
+    content: url("../assets/images/yellow.png");
+}
+
+#add-reminder {
+    height:inherit;
+}
+
+.priority-btn-group button.active{
+    background: rgb(0,0,0, 0.4);
+}

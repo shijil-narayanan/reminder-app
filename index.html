@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reminder App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/jquery.simple-dtpicker.css">
+    <link rel="stylesheet" href="./css/spash-screen.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/add-reminder.css">
+    <link rel="stylesheet" href="./css/reminder-list.css">
+    <link href="./css/sidebar.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript"  src="./js/external/jquery.simple-dtpicker.js"></script>
+</head>
+<body>
+
+<!--Splash Screen section starts-->
+<div class="splash-screen" id="splash-screen">
+    <img src="./assets/images/Group10.png">
+    <img src="./assets/images/Group12.png">
+    <button  class="add-reminder blue-gradient-btn">Add Reminder</button>
+</div>
+<!--Splash Screen section starts-->
+
+<div class="home" id="home" style="display: none;">
+
+    <!--Header section starts-->
+    <header>
+        <div class="header-content">
+            <img class="logo" src="./assets/images/Group10.png">
+            <img onclick="alert('This feature is under maintenance')" class="help" src="./assets/images/help.png">
+        </div>
+    </header>
+    <!--Header section ends-->
+
+
+    <div class="calendar-home">
+        <div class="sidebar">
+
+
+            <!--Add Reminder section starts-->
+            <div id="add-reminder" style="display: none;">
+                <div class="add-reminder-section">
+                    <div class="add-reminder-input">
+                        <input value="" type="text"  id="title" placeholder="ADD TITLE" class="reminder-title" />
+                        <input value="" type="text" id="description"  class="reminder-description" placeholder="Description" />
+                    </div>
+                    <div class="set-time-block">
+                        <div class="date-time-title">Set Date and Time</div>
+                        <div class="set-reminder-time">
+                            <input type="text" class="date-picker" name="date-picker"/>
+                            <div class="drop-down">
+                                <img class="help" src="./assets/images/dropdown.png">
+                            </div>
+                        </div>
+                        <div class="priority-section">
+                            <div class="date-time-title">Set Date and Priority</div>
+                            <div class="btn-group priority-btn-group" priority="high">
+                                <button class="high priority-btn" data-priority="high">High</button>
+                                <button class="medium priority-btn" data-priority="medium">Medium</button>
+                                <button class="low priority-btn" data-priority="low">Low</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="save-bg">
+                        <img class="save-bg" src="./assets/images/path 5.png">
+                        <button class="save-btn blue-gradient-btn" id="save-reminder">SAVE</button>
+                    </div>
+                </div>
+            </div>
+            <!--Add Reminder section ends-->
+
+            <!--Reminder List section starts-->
+            <div class="reminder-list" id="reminder-list" style="display: none;">
+                <div>
+                    <div class="add-reminder-section">
+                        <button class="add-reminder blue-gradient-btn">Add Reminder</button>
+                    </div>
+                    <div class="upcoming-reminders">
+                        <div class="upcoming-reminders-text">Upcoming Reminders</div>
+                        <div class="reminder-lists"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Reminder List section ends-->
+
+
+            <div id="collapse-btn">
+                <img id="collapsed-icon" src="./assets/images/collapse.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/date-utility.js"></script>
+<script src="./js/bg-img-updater.js"></script>
+<script src="./js/ui-controls.js"></script>
+<script src="./js/reminder-dom-helper.js"></script>
+<script src="./js/reminder-handler.js"></script>
+<script src="./js/validate-reminder-form.js"></script>
+<script src="./js/main.js"></script>
+
+
+<script type="text/javascript">
+    $(function(){
+        $('*[name=date-picker]').appendDtpicker({
+            "dateFormat": "DD-MM-YY H:mmTT",
+            "futureOnly": true
+        });
+    });
+</script>
+
+
+</body>
+</html>

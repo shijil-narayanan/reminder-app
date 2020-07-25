@@ -1,0 +1,10 @@
+.calendar-home {
+    height: calc(100vh - 64px);
+    display: flex;
+    transition: 1s ease;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+
