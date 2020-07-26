@@ -1,9 +1,8 @@
 
-
 .add-reminder-section{
     display: flex;
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
     justify-content: space-between;
     flex-direction: column;

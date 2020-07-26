@@ -17,7 +17,7 @@ class UIControls {
         document.querySelector('#home').style.display = 'block';
         document.querySelector('#add-reminder').style.display = 'block';
 
-        document.querySelector('#splash-screen').style.display = 'none';
+        document.querySelector('#splash-screen').remove();
         document.querySelector('#reminder-list').style.display = 'none';
 
     }
@@ -30,7 +30,7 @@ class UIControls {
         document.querySelector('#reminder-list').style.display = 'block';
 
         document.querySelector('#add-reminder').style.display = 'none';
-        document.querySelector('#splash-screen').style.display = 'none';
+        document.querySelector('#splash-screen').remove();
     }
 
 }
