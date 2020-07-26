@@ -1,7 +1,7 @@
 
 .reminder-list{
     background: #F5F7F8;
-    height: calc(100vh - 64px);
+    height: inherit;
 }
 
 .reminder-list .add-reminder-section{

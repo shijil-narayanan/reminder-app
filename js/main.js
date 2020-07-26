@@ -37,7 +37,7 @@
      */
     function handleReminderPrioritySelection(evt){
         const { priority}  = evt.target.dataset;
-        reminderDOMHelper.updateReminderPriorityInDOM(priority);
+        if (priority) reminderDOMHelper.updateReminderPriorityInDOM(priority);
     }
 
     /**
@@ -89,27 +89,21 @@
 
     window.addEventListener('DOMContentLoaded', () => {
 
+        if(reminderCRUDHandler.getReminderList().length)  renderReminderList();
 
         document.querySelector('#collapsed-icon').onclick = uiControl.toggleSideBar;
 
         document.querySelector('#save-reminder').onclick = saveReminder;
 
-        document.body.addEventListener('click', (evt) => {
+        document.querySelector('.priority-section').onclick = (evt) => handleReminderPrioritySelection(evt);
 
-            if(evt.target.className.search('add-reminder') > -1) {
-                renderAddReminder()
-            }
-
-            if(evt.target.className.search('priority-btn') > -1) {
-                handleReminderPrioritySelection(evt);
-            }
-
-            handleReminderActions(evt);
+        document.querySelectorAll('.add-reminder').forEach(item => {
+            item.addEventListener('click', () => {
+                renderAddReminder();
+            });
         });
 
-        if(reminderCRUDHandler.getReminderList().length){
-            renderReminderList();
-        }
+        document.querySelector('.reminder-lists').onclick = (evt) => handleReminderActions(evt);
     });
 
 

@@ -17,8 +17,8 @@ class UIControls {
         document.querySelector('#home').style.display = 'block';
         document.querySelector('#add-reminder').style.display = 'block';
 
-        document.querySelector('#splash-screen').remove();
-        document.querySelector('#reminder-list').style.display = 'none';
+        document.getElementById('reminder-list').style.display = 'none';
+        this.removeSplashScreen();
 
     }
 
@@ -30,7 +30,17 @@ class UIControls {
         document.querySelector('#reminder-list').style.display = 'block';
 
         document.querySelector('#add-reminder').style.display = 'none';
-        document.querySelector('#splash-screen').remove();
+        this.removeSplashScreen();
+    }
+
+    /**
+     * Responsible to remove splash screen from DOM
+     */
+    removeSplashScreen(){
+        const splashScreen = document.querySelector('#splash-screen');
+        if(splashScreen){
+            splashScreen.remove();
+        }
     }
 
 }

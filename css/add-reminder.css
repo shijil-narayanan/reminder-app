@@ -1,17 +1,24 @@
 
 .add-reminder-section{
-    display: flex;
+    /*display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     justify-content: space-between;
     flex-direction: column;
+    height: inherit;*/
     height: inherit;
+    position: relative;
 }
 
 .add-reminder-input{
-    padding:20px 18px;
+    padding: 20px 18px;
     background-color: rgba(255,255,255, 0.16);
+    position: absolute;
+    top: 0;
+    /* width: 100%; */
+    right: 0;
+    left: 0;
 }
 
 .reminder-title{
@@ -48,6 +55,9 @@
     margin: 0 29px;
     color: white;
     font-size:13px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -150,4 +160,11 @@
 
 .priority-btn-group button.active{
     background: rgb(0,0,0, 0.4);
+}
+
+.save-bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

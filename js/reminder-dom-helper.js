@@ -60,18 +60,16 @@ class ReminderDOMHelper{
     renderReminderList(list = []) {
 
         let reminderItem = '';
-        const icons = ['yellow', 'green', 'red'];
-        const randomIndex = Math.floor(Math.random() * Math.floor(3));
+        const priorityIconColors = { high: 'red', medium: 'green', low: 'yellow'};
 
         list.forEach((item, index) => {
-            const dateInfo = item.date.split('  ');
             reminderItem += `
               <div class="reminder-item-box">
                    <div class="reminder-item">
-                      <img class="reminder-icon" src="./assets/images/${icons[randomIndex]}.png"/>
+                      <img class="reminder-icon" src="./assets/images/${priorityIconColors[item.priority]}.png"/>
                       <div class="title">${item.title}</div>
                       <div class="description">${item.description}</div>
-                       <div class="date">${dateInfo[0]} - <span class="time">${dateInfo[1]}</span></div>
+                       <div class="date">${item.date}</div>
                        <div class="reminder-actions">
                           <img class="edit-reminder cursor-pointer" data-action="edit" data-id="${index}" src="./assets/images/edit.png"/>
                           <img class="remove-reminder cursor-pointer" data-action="delete" data-id="${index}" src="./assets/images/cancel.png"/>
