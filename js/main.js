@@ -106,9 +106,6 @@
         document.querySelector('.reminder-lists').onclick = (evt) => handleReminderActions(evt);
     });
 
-
-
-
 }());
 
 

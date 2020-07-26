@@ -5,4 +5,96 @@
     position: relative;
 }
 
+.steps{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 30px;
+    flex-flow: wrap;
+}
 
+.help-modal{
+    display: flex;
+    justify-content: center;
+    padding:30px 40px;
+    flex-flow: wrap;
+}
+
+.help-modal .logo{
+    margin-bottom:20px;
+}
+
+.help-modal .help-text{
+    font-family: Lato-Regular;
+    font-size: 14px;
+    color: #A0A0A0;
+    letter-spacing: 2.01px;
+    line-height: 27px;
+}
+
+.step-title{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #414141;
+    letter-spacing: 1.49px;
+    border-bottom: 1px solid #9F9F9F;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.step-sub-title{
+    font-family: OpenSans-Bold;
+    font-size: 18px;
+    color: #616161;
+    letter-spacing: 1.49px;
+    padding-top:5px;
+}
+
+.forward{
+    margin: 0px 30px;
+    height: 20px;
+    width:20px;
+    align-self: center;
+}
+
+.services{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin: 30px;
+}
+
+.search-img{
+    height:250px;
+    width:250px;
+}
+
+.service-title{
+    font-family: OpenSans-SemiBold;
+    font-size: 16px;
+    color: #606060;
+    letter-spacing: 1.32px;
+}
+
+.service-sub-title{
+    font-family: OpenSans-Regular;
+    font-size: 12px;
+    color: #757575;
+    letter-spacing: 0.99px;
+    line-height: 20px;
+    padding-top:10px;
+}
+.continue-btn{
+    background: #11B742;
+    border-radius: 24.5px;
+    margin-top:20px;
+    padding: 10px 30px;
+    color:white;
+}
+
+.service-text-blk-1{
+    margin-left:30px;
+}
+
+.service-text-blk-2{
+    margin-right:30px;
+}

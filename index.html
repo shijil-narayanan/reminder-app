@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/add-reminder.css">
     <link rel="stylesheet" href="./css/reminder-list.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link href="./css/sidebar.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript"  src="./js/external/jquery.simple-dtpicker.js"></script>
 </head>
 <body>
-
 <!--Splash Screen section starts-->
 <div id="splash-screen">
     <div class="splash-screen">
@@ -24,25 +24,18 @@
         <button  class="add-reminder blue-gradient-btn">Add Reminder</button>
     </div>
 </div>
-
 <!--Splash Screen section starts-->
-
 <div class="home" id="home" style="display: none;">
-
     <!--Header section starts-->
     <header>
         <div class="header-content">
             <img class="logo" src="./assets/images/Group10.png">
-            <img onclick="alert('This feature is under maintenance')" class="help" src="./assets/images/help.png">
+            <a href="#help"><img class="help" src="./assets/images/help.png"></a>
         </div>
     </header>
     <!--Header section ends-->
-
-
     <div class="calendar-home">
         <div class="sidebar">
-
-
             <!--Add Reminder section starts-->
             <div id="add-reminder" style="display: none;">
                 <div class="add-reminder-section">
@@ -74,7 +67,6 @@
                 </div>
             </div>
             <!--Add Reminder section ends-->
-
             <!--Reminder List section starts-->
             <div class="reminder-list" id="reminder-list" style="display: none;">
                 <div>
@@ -88,17 +80,56 @@
                 </div>
             </div>
             <!--Reminder List section ends-->
-
-
             <div id="collapse-btn">
                 <img id="collapsed-icon" src="./assets/images/collapse.png">
             </div>
-
         </div>
     </div>
 </div>
-
-
+<div id="help" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <div class="help-modal">
+                <img class="logo" src="./assets/images/Group10.png">
+                <p class="help-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="help-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-title">Step 1</div>
+                        <div class="step-sub-title">Lorem ipsum</div>
+                    </div>
+                    <img class="forward" src="./assets/images/Group6.png">
+                    <div class="step">
+                        <div class="step-title">Step 2</div>
+                        <div class="step-sub-title">The classic Case of</div>
+                    </div>
+                    <img class="forward" src="./assets/images/Group6.png">
+                    <div class="step">
+                        <div class="step-title">Step 3</div>
+                        <div class="step-sub-title">Letraset, a French </div>
+                    </div>
+                </div>
+                <div class="services">
+                    <img class="search-img" src="./assets/images/search.png">
+                    <div class="service-text-blk-1">
+                        <div class="service-title">FROM PRINT TO DESKTOP TO WEB</div>
+                        <div class="service-sub-title">Aldus Corporation, which later merged with Adobe Systems, helped bring Lorem Ipsum into the information age with its 1985 flagship software Aldus PageMaker. The program came bundled with Lorem Ipsum dummy text to help with laying out page content, and other word processors like Microsoft Word followed suit. More recently the growth of web design has helped proliferate Lorem Ipsum across the internet as a placeholder for laying out websites and blogs– and in some cases the final content (don't let that be you!).</div>
+                        <button class="continue-btn">Continue</button>
+                    </div>
+                </div>
+                <div class="services">
+                    <div class="service-text-blk-2">
+                        <div class="service-title">ORIGINAL LATIN</div>
+                        <div class="service-sub-title">“Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur</div>
+                        <button class="continue-btn">Continue</button>
+                    </div>
+                    <img class="search-img" src="./assets/images/search.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="./js/date-utility.js"></script>
 <script src="./js/bg-img-updater.js"></script>
 <script src="./js/ui-controls.js"></script>
@@ -106,8 +137,6 @@
 <script src="./js/reminder-handler.js"></script>
 <script src="./js/validate-reminder-form.js"></script>
 <script src="./js/main.js"></script>
-
-
 <script type="text/javascript">
     $(function(){
         $('*[name=date-picker]').appendDtpicker({
@@ -116,7 +145,5 @@
         });
     });
 </script>
-
-
 </body>
 </html>

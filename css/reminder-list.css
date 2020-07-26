@@ -90,3 +90,8 @@
     height:10px;
     margin-left:5px;
 }
+
+.reminder-lists{
+    max-height: 73vh;
+    overflow:auto;
+}
